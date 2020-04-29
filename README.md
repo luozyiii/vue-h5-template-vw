@@ -4,21 +4,21 @@
 #### vue-cli init 初始化项目
 Check the features needed for your project: (Press <space> to select, <a> to toggle all, <i> to invert selection)
 >(*) Babel
- ( ) TypeScript
- (*) Progressive Web App (PWA) Support
- (*) Router
- (*) Vuex
- (*) CSS Pre-processors
- (*) Linter / Formatter
- ( ) Unit Testing
- ( ) E2E Testing
+>( ) TypeScript
+>(*) Progressive Web App (PWA) Support
+>(*) Router
+>(*) Vuex
+>(*) CSS Pre-processors
+>(*) Linter / Formatter
+>( ) Unit Testing
+>( ) E2E Testing
 
 
 #### 移动适配 vm 尝试
 
 ```
 yarn add postcss-import postcss-url autoprefixer -D
-yarn add postcss-aspect-ratio-mini postcss-px-to-viewport postcss-write-svg postcss-viewport-units cssnano cssnano-preset-advanced - D
+yarn add postcss-aspect-ratio-mini postcss-px-to-viewport postcss-write-svg postcss-viewport-units cssnano cssnano-preset-advanced -D
 
 postcss-cssnext(有问题,先不添加)
 ```
