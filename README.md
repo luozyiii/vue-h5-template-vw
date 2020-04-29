@@ -1,10 +1,10 @@
 ### vue-h5-template-vw
 >vue的H5模板,采用vw适配；自由选择自己熟悉的UI组件库搭配
 
-UI组件库
-vux 基于Vue和WeUI的组件库
-Vant 是有赞前端团队基于有赞统一的规范实现的 Vue 组件库，提供了一整套 UI 基础组件和业务组件
-Mint UI 由饿了么前端团队推出的 Mint UI 是一个基于 Vue.js 的移动端组件库
+UI组件库  
+vux 基于Vue和WeUI的组件库  
+Vant 是有赞前端团队基于有赞统一的规范实现的 Vue 组件库，提供了一整套 UI 基础组件和业务组件  
+Mint UI 由饿了么前端团队推出的 Mint UI 是一个基于 Vue.js 的移动端组件库  
 
 #### vue-cli init 初始化项目
 Check the features needed for your project: (Press <space> to select, <a> to toggle all, <i> to invert selection)
