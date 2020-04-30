@@ -2,9 +2,21 @@
   <div class="about">
     <h1>This is an about page</h1>
     <div id="example"></div>
+    <button @click="testApi">test api</button>
     <!-- <div aspectratio w-188-246 class="color"></div> -->
   </div>
 </template>
+
+<script>
+export default {
+  name: 'About',
+  methods: {
+    async testApi () {
+      await this.api.login()
+    }
+  }
+}
+</script>
 
 <style lang="scss" scoped>
 .color {

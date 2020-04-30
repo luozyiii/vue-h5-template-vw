@@ -301,6 +301,24 @@ meta: {
 }
 ```
 
+#### axios
+```
+yarn add axios -D
+```
+目录
+```
+api
+  axios.js
+  index.js
+```
+
+挂载到全局main.js
+```
+import api from '@/api'
+
+Vue.prototype.api = api
+```
+
 
 
 
