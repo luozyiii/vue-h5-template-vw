@@ -1,32 +1,51 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
-    <router-view/>
+    <keep-alive :include="includeAlives">
+      <router-view />
+    </keep-alive>
   </div>
 </template>
 
-<style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
-
-#nav {
-  padding: 30px;
-
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-
-    &.router-link-exact-active {
-      color: #42b983;
+<script>
+export default {
+  name: 'App',
+  data () {
+    return {
+      includeAlives: []
+    }
+  },
+  watch: {
+    $route: {
+      handler (cur) {
+        this.aliveHandle()
+      },
+      immediate: true
+    }
+  },
+  methods: {
+    aliveHandle () {
+      if (this.$route.meta.keepAlive) {
+        for (const matchRoute of this.$route.matched) {
+          const componentName = matchRoute.components.default.name
+          if (matchRoute.meta.keepAlive) {
+            // 缓存
+            if (this.includeAlives.indexOf(componentName) === -1) {
+              this.includeAlives.push(componentName)
+            }
+          } else {
+            // 清除缓存
+            const index = this.includeAlives.indexOf(componentName)
+            if (index > -1) {
+              this.includeAlives.splice(index, 1)
+            }
+          }
+        }
+      }
     }
   }
 }
+</script>
+
+<style lang="scss">
+  @import "@/assets/style/common.scss";
 </style>
